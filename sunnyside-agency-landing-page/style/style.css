@@ -118,3 +118,61 @@
   color: hsl(212, 27%, 19%);
   font-weight: 800;
 }
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-box {
+  width: 50%;
+  min-height: 50vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  font-family: "Fraunces", serif;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-box-text {
+  width: 75%;
+  padding-bottom: 10vw;
+}
+
+.image-box-text h3 {
+  font-size: 30px;
+}
+
+.image-box-text p {
+  font-family: "Barlow", serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.image-box.graphic {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-box-text.graphic {
+  color: hsl(167, 40%, 24%);
+}
+
+.image-box.photography {
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-box-text.photography {
+  color: hsl(198, 62%, 26%);
+}
