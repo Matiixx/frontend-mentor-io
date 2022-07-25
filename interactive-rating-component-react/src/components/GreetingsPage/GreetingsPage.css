@@ -1,0 +1,29 @@
+.greetings-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.greetings-container img {
+  height: 100px;
+}
+
+.greetings-container .selected-grade {
+  background-color: hsl(210deg 15% 26%);
+  padding: 6px 16px 6px 16px;
+  border-radius: 15px;
+  font-size: 15px;
+  color: hsl(25, 97%, 53%);
+}
+
+.greetings-h1 {
+  font-weight: 600;
+}
+
+.greetings-p {
+  text-align: center;
+  color: hsl(217, 12%, 63%);
+}

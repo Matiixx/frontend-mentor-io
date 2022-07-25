@@ -1,0 +1,24 @@
+.grade-circle {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213deg 27% 27%);
+  border-radius: 50%;
+  transition: ease 0.3s;
+  cursor: pointer;
+  color: hsl(217, 12%, 63%);
+  font-weight: 500;
+}
+
+.grade-circle:hover {
+  background-color: hsl(25, 97%, 53%);
+  transition: ease 0.3s;
+  color: white;
+}
+
+.grade-circle.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}

@@ -1,0 +1,14 @@
+.logo-container {
+  background-color: hsl(213deg 27% 27%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.logo-container img {
+  width: 16px;
+  height: 16px;
+}
