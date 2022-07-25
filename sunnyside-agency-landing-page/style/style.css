@@ -126,7 +126,7 @@
 
 .image-box {
   width: 50%;
-  min-height: 50vw;
+  height: 40vw;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -175,4 +175,72 @@
 
 .image-box-text.photography {
   color: hsl(198, 62%, 26%);
+}
+
+.client-testimonials-containter {
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  font-family: "Fraunces", serif;
+}
+
+.client-testimonials-containter h3 {
+  text-align: center;
+  color: hsl(232, 10%, 55%);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.client-testimonials-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.client-testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.client-testimonial img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.client-testimonial p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Barlow", serif;
+  font-weight: 800;
+  line-height: 2em;
+  font-size: 18px;
+  color: hsl(212, 27%, 19%);
+}
+
+.client-testimonial h4 {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.client-testimonial h5 {
+  color: hsl(232, 10%, 55%);
+  font-weight: 400;
+}
+
+.gallery-container-flex {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.gallery-container-flex img {
+  width: 25vw;
 }
