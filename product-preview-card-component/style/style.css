@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fraunces&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(26deg 40% 92%);
+}
+
+.product-component {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.product-component .img-div {
+  width: 50%;
+  background-image: url("../images/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px 0 0 20px;
+}
+
+.product-component .product-info {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product-info .product-info-h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-info .product-info-p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.product-info .product-into-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-into-price .new-price {
+  font-size: 32px;
+  color: hsl(158, 36%, 37%);
+  margin-right: 20px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+
+.product-into-price .old-price {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.add-button {
+  transition: ease 0.3s;
+  background-color: hsl(158, 36%, 37%);
+  padding: 12px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.add-button img {
+  margin-right: 10px;
+}
+
+.add-button:hover {
+  background-color: hsl(156deg 42% 18%);
+  transition: ease 0.3s;
+}
