@@ -242,5 +242,57 @@
 }
 
 .gallery-container-flex img {
-  width: 25vw;
+  width: 25%;
+}
+
+.footer-containter {
+  background-color: hsl(167deg 44% 70%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.footer-buttons-container {
+  display: flex;
+  flex-direction: row;
+  color: hsl(167, 40%, 24%);
+  justify-content: center;
+  font-family: "Barlow", serif;
+  margin-top: 30px;
+}
+
+.footer-buttons-container a {
+  text-decoration: none;
+  color: hsl(167, 40%, 24%);
+  font-weight: 400;
+}
+
+.footer-buttons-container a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.footer-buttons-container div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.socials-container {
+  margin-top: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socials-container a {
+  margin-left: 10px;
+  margin-right: 10px;
 }
