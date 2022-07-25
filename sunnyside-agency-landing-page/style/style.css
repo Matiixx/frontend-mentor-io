@@ -45,9 +45,16 @@
   color: black;
   background-color: white;
   padding: 0.75em 2em 0.75em 2em;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: 800;
+  transition: ease 0.2s;
   text-transform: uppercase;
+}
+
+.nav-buttons-container .button.contact:hover {
+  transition: ease 0.2s;
+  background-color: hsl(199deg 100% 72%);
+  color: white;
 }
 
 .header-text {
@@ -117,6 +124,22 @@
   text-decoration: none;
   color: hsl(212, 27%, 19%);
   font-weight: 800;
+}
+
+.article-text .yellow-hover:hover::after {
+  content: "";
+  height: 8px;
+  display: block;
+  background-color: hsl(47, 97%, 86%);
+  margin-top: -8px;
+}
+
+.article-text .pink-hover:hover::after {
+  content: "";
+  height: 8px;
+  display: block;
+  background-color: hsl(12, 96%, 90%);
+  margin-top: -8px;
 }
 
 .images-container {
@@ -271,17 +294,14 @@
   text-decoration: none;
   color: hsl(167, 40%, 24%);
   font-weight: 400;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .footer-buttons-container a:hover {
   text-decoration: none;
   color: white;
   font-weight: 400;
-}
-
-.footer-buttons-container div {
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .socials-container {
@@ -295,4 +315,8 @@
 .socials-container a {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.socials-container a:hover img {
+  color: white;
 }
