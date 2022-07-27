@@ -6,7 +6,7 @@ export default function Balance({ balance }) {
   return (
     <div className="balance-container">
       <div className="balance-count">
-        <span>My balance</span>
+        <span style={{ color: "hsl(33, 100%, 98%)" }}>My balance</span>
         <h2>
           {"$"}
           {balance}
