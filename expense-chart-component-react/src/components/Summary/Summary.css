@@ -1,0 +1,28 @@
+.summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+}
+
+.total-amount-containter {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount-h1 {
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+.summary-change {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.summary-change h4 {
+  margin: 0;
+}
