@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+
+.App {
+  background-color: hsl(29deg 63% 92%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+}
