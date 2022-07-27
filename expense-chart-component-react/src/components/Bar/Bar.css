@@ -1,0 +1,39 @@
+.chart-bar {
+  width: 14%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.bar.max-amount {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.amount {
+  display: none;
+  width: 100%;
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+span {
+  color: hsl(28, 10%, 53%);
+}
+
+.chart-bar:hover .bar {
+  opacity: 0.7;
+}
+
+.chart-bar:hover .amount {
+  display: block;
+}
