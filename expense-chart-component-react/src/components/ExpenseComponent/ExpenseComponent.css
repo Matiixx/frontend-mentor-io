@@ -1,0 +1,6 @@
+.expense-component {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
