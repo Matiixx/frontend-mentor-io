@@ -1,5 +1,6 @@
 import React from "react";
 import "./Summary.css";
+import CountUp from "react-countup";
 
 export default function Summary({ totalAmount }) {
   return (
@@ -8,7 +9,13 @@ export default function Summary({ totalAmount }) {
         <span>Total this week</span>
         <h1 className="amount-h1">
           {"$"}
-          {totalAmount}
+          <CountUp
+            start={0}
+            end={totalAmount}
+            decimals={2}
+            style={{ color: "hsl(25, 47%, 15%)" }}
+            duration={0.6}
+          />
         </h1>
       </div>
       <div className="summary-change">
