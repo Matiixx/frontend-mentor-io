@@ -1,7 +1,26 @@
 import "./styles/App.scss";
+import dataJSON from "./data.json";
+import { useEffect, useState } from "react";
+import CommentSection from "./components/CommentSection/CommentSection";
 
 function App() {
-  return <div className="App">App</div>;
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    setData(dataJSON);
+
+    return () => {
+      console.log(dataJSON);
+      setData({});
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  return (
+    <div className="App">
+      <CommentSection comments={data.comments} />
+    </div>
+  );
 }
 
 export default App;
