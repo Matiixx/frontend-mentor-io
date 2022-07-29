@@ -1,0 +1,49 @@
+@use "../../../styles/colors";
+
+.comment-container {
+  background-color: colors.$white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  .reply-container {
+    width: 95%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-left: 2px solid colors.$light-gray;
+    padding-left: 5%;
+  }
+  .comment {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: colors.$white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    .votes-container {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .comment-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .comment-body {
+      padding-right: 20px;
+      p {
+        color: colors.$grayish-blue;
+      }
+      .nickname-highlight {
+        color: colors.$moderate-blue;
+        font-weight: 700;
+      }
+    }
+  }
+}
