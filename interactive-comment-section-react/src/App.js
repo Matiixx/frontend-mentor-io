@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <CommentSection comments={data.comments} />
+      <CommentSection comments={data.comments} currentUser={data.currentUser} />
     </div>
   );
 }
