@@ -5,8 +5,12 @@ export default function UserInfo({ user, createdAt }) {
   return (
     <div className="user-info-container">
       <div className="user-info">
-        <img src={`${user.image.png}`} alt="profile" />
-        <h3>{user.username}</h3>
+        {user && (
+          <>
+            <img src={`${user.image.png}`} alt="profile" />
+            <h3>{user.username}</h3>{" "}
+          </>
+        )}
         <span>{createdAt}</span>
       </div>
       <div className="reply-btn">
