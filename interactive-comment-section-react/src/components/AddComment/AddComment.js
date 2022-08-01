@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AddNewComment } from "../../utils/utility";
 import "./AddComment.scss";
 
 export default function AddComment({ currentUser, isReplying }) {
@@ -9,7 +10,16 @@ export default function AddComment({ currentUser, isReplying }) {
   };
 
   const handleSubmit = (e) => {
-    if (newComment) console.log(newComment);
+    e.preventDefault();
+    if (newComment) {
+      if (isReplying) {
+        setNewComment("");
+      }
+      if (!isReplying) {
+        AddNewComment(newComment, currentUser);
+        setNewComment("");
+      }
+    }
   };
 
   return (
