@@ -3,7 +3,7 @@ import dataJSON from "./data.json";
 import { useEffect } from "react";
 import CommentSection from "./components/CommentSection/CommentSection";
 import { useLocalStorage } from "./utils/useLocalStorage";
-import { AddNewComment } from "./utils/utility";
+import { AddNewComment, DeleteComment } from "./utils/utility";
 
 function App() {
   const [data, setData] = useLocalStorage("comments", {});
@@ -21,12 +21,22 @@ function App() {
     AddNewComment(content, data.currentUser, [data, setData]);
   };
 
+  const deleteComment = (id) => {
+    DeleteComment(id, [data, setData]);
+  };
+
+  const isCurrentUser = (user) => {
+    return data.currentUser.username === user.username;
+  };
+
   return (
     <div className="App">
       <CommentSection
         comments={data.comments}
         currentUser={data.currentUser}
         addCommentHandle={addComment}
+        isCurrentUser={isCurrentUser}
+        deleteHandle={deleteComment}
       />
     </div>
   );
