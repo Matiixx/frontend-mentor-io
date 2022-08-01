@@ -21,10 +21,15 @@
       width: 40px;
       height: 40px;
     }
+    .is-current-user-mark {
+      background-color: colors.$moderate-blue;
+      color: white;
+      padding: 2px 5px 2px 5px;
+      font-size: 12px;
+    }
   }
-  .reply-btn {
+  .btn {
     padding: 10px;
-    color: colors.$moderate-blue;
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -34,7 +39,13 @@
       margin-right: 10px;
     }
   }
-  .reply-btn:hover {
+  .reply.btn {
+    color: colors.$moderate-blue;
+  }
+  .reply.btn:hover {
     color: colors.$light-grayish-blue;
+  }
+  .delete.btn {
+    color: colors.$soft-red;
   }
 }

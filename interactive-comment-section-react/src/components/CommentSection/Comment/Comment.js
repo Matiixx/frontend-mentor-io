@@ -3,7 +3,12 @@ import "./Comment.scss";
 import UserInfo from "./UserInfo/UserInfo";
 import VoteButton from "./VoteButton/VoteButton";
 
-export default function Comment({ commentData, parentCommentUsername }) {
+export default function Comment({
+  commentData,
+  parentCommentUsername,
+  isCurrentUser,
+  deleteHandle,
+}) {
   return (
     <>
       <div className="comment-container">
@@ -15,6 +20,9 @@ export default function Comment({ commentData, parentCommentUsername }) {
             <UserInfo
               user={commentData.user}
               createdAt={commentData.createdAt}
+              isCurrentUser={isCurrentUser}
+              deleteHandle={deleteHandle}
+              commentID={commentData.id}
             />
             <div className="comment-body">
               <p>
@@ -39,6 +47,8 @@ export default function Comment({ commentData, parentCommentUsername }) {
                   key={el.id}
                   commentData={el}
                   parentCommentUsername={commentData.user.username}
+                  isCurrentUser={isCurrentUser}
+                  deleteHandle={deleteHandle}
                 />
               );
             })}
