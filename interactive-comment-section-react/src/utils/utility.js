@@ -1,4 +1,4 @@
-import { useLocalStorage } from "./useLocalStorage";
+// import { useLocalStorage } from "./useLocalStorage";
 
 function GetLastID(comments, maxID) {
   for (let com of comments) {
@@ -11,10 +11,7 @@ function GetLastID(comments, maxID) {
   return maxID;
 }
 
-export function AddNewComment(content, user) {
-  let data = JSON.parse(localStorage.getItem("comments"));
-  // console.log(content, user);
-
+export function AddNewComment(content, user, [data, setData]) {
   let newID = GetLastID(data.comments, 0) + 1;
   let newComment = {
     content,
@@ -29,6 +26,5 @@ export function AddNewComment(content, user) {
     comments: [...data.comments, newComment],
     currentUser: data.currentUser,
   };
-
-  localStorage.setItem("comments", JSON.stringify(newData));
+  setData(newData);
 }
