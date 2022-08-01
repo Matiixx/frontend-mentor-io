@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AddNewComment } from "../../utils/utility";
 import "./AddComment.scss";
 
 export default function AddComment({
