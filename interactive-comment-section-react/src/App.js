@@ -3,7 +3,7 @@ import dataJSON from "./data.json";
 import { useEffect } from "react";
 import CommentSection from "./components/CommentSection/CommentSection";
 import { useLocalStorage } from "./utils/useLocalStorage";
-import { AddNewComment, GetLastID } from "./utils/utility";
+import { AddNewComment } from "./utils/utility";
 
 function App() {
   const [data, setData] = useLocalStorage("comments", {});
