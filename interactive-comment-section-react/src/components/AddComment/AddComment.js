@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { AddNewComment } from "../../utils/utility";
 import "./AddComment.scss";
 
-export default function AddComment({ currentUser, isReplying }) {
+export default function AddComment({
+  currentUser,
+  isReplying,
+  addCommentHandle,
+}) {
   const [newComment, setNewComment] = useState("");
 
   const handleTextAreaChange = (e) => {
@@ -11,14 +15,15 @@ export default function AddComment({ currentUser, isReplying }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (newComment) {
-      if (isReplying) {
-        setNewComment("");
-      }
-      if (!isReplying) {
-        AddNewComment(newComment, currentUser);
-        setNewComment("");
-      }
+    if (!newComment) {
+      return;
+    }
+    if (isReplying) {
+      setNewComment("");
+    }
+    if (!isReplying) {
+      addCommentHandle(newComment);
+      setNewComment("");
     }
   };
 
