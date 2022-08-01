@@ -1,6 +1,7 @@
 @use "../../styles/colors";
 
 .new-comment-container {
+  min-width: 500px;
   max-width: 1000px;
   display: flex;
   flex-direction: row;
