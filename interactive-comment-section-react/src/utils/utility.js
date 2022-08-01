@@ -28,3 +28,11 @@ export function AddNewComment(content, user, [data, setData]) {
   };
   setData(newData);
 }
+
+export function DeleteComment(commentID, [data, setData]) {
+  // console.log(data);
+  setData({
+    comments: data.comments.filter((el) => el.id !== commentID),
+    currentUser: data.currentUser,
+  });
+}
