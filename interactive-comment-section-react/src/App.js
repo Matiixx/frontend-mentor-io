@@ -1,18 +1,18 @@
 import "./styles/App.scss";
 import dataJSON from "./data.json";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CommentSection from "./components/CommentSection/CommentSection";
+import { useLocalStorage } from "./utils/useLocalStorage";
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useLocalStorage("comments", {});
 
   useEffect(() => {
-    setData(dataJSON);
-
-    return () => {
+    if (Object.keys(data).length === 0) {
       console.log(dataJSON);
-      setData({});
-    };
+      setData(dataJSON);
+    }
+
     // eslint-disable-next-line
   }, []);
 
