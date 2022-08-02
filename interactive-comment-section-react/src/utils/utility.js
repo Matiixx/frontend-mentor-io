@@ -11,12 +11,37 @@ function GetLastID(comments, maxID) {
   return maxID;
 }
 
+function GetCommentByID(comments, id) {
+  for (let com of comments) {
+    if (com.id === id) return com;
+    if (com?.replies && com.replies.length !== 0) {
+      if (GetCommentByID(com.replies, id)) {
+        return GetCommentByID(com.replies, id);
+      }
+    }
+  }
+  return null;
+}
+
+function DeleteRecursive(comments, id) {
+  return comments
+    .map((el) => {
+      return { ...el };
+    })
+    .filter((el) => {
+      if ("replies" in el) {
+        el.replies = DeleteRecursive(el.replies, id);
+      }
+      return el.id !== id;
+    });
+}
+
 export function AddNewComment(content, user, [data, setData]) {
   let newID = GetLastID(data.comments, 0) + 1;
   let newComment = {
+    id: newID,
     content,
     createdAt: "1 sec ago",
-    id: newID,
     replies: [],
     score: 0,
     user,
@@ -30,9 +55,8 @@ export function AddNewComment(content, user, [data, setData]) {
 }
 
 export function DeleteComment(commentID, [data, setData]) {
-  // console.log(data);
   setData({
-    comments: data.comments.filter((el) => el.id !== commentID),
+    comments: DeleteRecursive(data.comments, commentID),
     currentUser: data.currentUser,
   });
 }
