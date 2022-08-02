@@ -7,6 +7,7 @@ export default function UserInfo({
   isCurrentUser,
   deleteHandle,
   commentID,
+  handleReplyClick,
 }) {
   return (
     <div className="user-info-container">
@@ -29,7 +30,7 @@ export default function UserInfo({
         </div>
       )}
       {!isCurrentUser(user) && (
-        <div className="reply btn">
+        <div className="reply btn" onClick={() => handleReplyClick(commentID)}>
           <img src={"./images/icon-reply.svg"} alt="reply" />
           <span>Reply</span>
         </div>
