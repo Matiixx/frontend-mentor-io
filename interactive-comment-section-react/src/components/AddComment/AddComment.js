@@ -5,6 +5,8 @@ export default function AddComment({
   currentUser,
   isReplying,
   addCommentHandle,
+  addNewReply,
+  parentCommentID,
 }) {
   const [newComment, setNewComment] = useState("");
 
@@ -19,6 +21,7 @@ export default function AddComment({
     }
     if (isReplying) {
       setNewComment("");
+      addNewReply(parentCommentID, newComment);
     }
     if (!isReplying) {
       addCommentHandle(newComment);
