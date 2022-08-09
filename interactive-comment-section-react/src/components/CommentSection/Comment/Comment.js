@@ -7,13 +7,9 @@ import VoteButton from "./VoteButton/VoteButton";
 export default function Comment({
   commentData,
   parentCommentUsername,
-  isCurrentUser,
-  deleteHandle,
   handleReply,
   replyCommentID,
   currentUser,
-  addCommentHandle,
-  addNewReply,
 }) {
   const randID = useId();
 
@@ -28,8 +24,6 @@ export default function Comment({
             <UserInfo
               user={commentData.user}
               createdAt={commentData.createdAt}
-              isCurrentUser={isCurrentUser}
-              deleteHandle={deleteHandle}
               commentID={commentData.id}
               handleReplyClick={handleReply}
             />
@@ -57,16 +51,12 @@ export default function Comment({
                     <Comment
                       key={el.id}
                       commentData={el}
-                      isCurrentUser={isCurrentUser}
-                      deleteHandle={deleteHandle}
                       handleReply={handleReply}
                       replyCommentID={replyCommentID}
-                      addNewReply={addNewReply}
                     />
                     <AddComment
                       currentUser={currentUser}
                       isReplying={true}
-                      addNewReply={addNewReply}
                       key={randID}
                       parentCommentID={el.id}
                     />
@@ -78,11 +68,8 @@ export default function Comment({
                   key={el.id}
                   commentData={el}
                   parentCommentUsername={commentData.user.username}
-                  isCurrentUser={isCurrentUser}
-                  deleteHandle={deleteHandle}
                   handleReply={handleReply}
                   replyCommentID={replyCommentID}
-                  addNewReply={addNewReply}
                 />
               );
             })}

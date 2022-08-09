@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import useStore from "../../store/useStore";
 import "./AddComment.scss";
 
 export default function AddComment({
   currentUser,
   isReplying,
-  addCommentHandle,
-  addNewReply,
   parentCommentID,
 }) {
   const [newComment, setNewComment] = useState("");
@@ -13,6 +12,9 @@ export default function AddComment({
   const handleTextAreaChange = (e) => {
     setNewComment(e.target.value);
   };
+
+  const addCommentHandle = useStore((state) => state.addComment);
+  const addNewReply = useStore((state) => state.addNewReply);
 
   const handleSubmit = (e) => {
     e.preventDefault();

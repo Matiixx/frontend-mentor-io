@@ -3,14 +3,7 @@ import AddComment from "../AddComment/AddComment";
 import Comment from "./Comment/Comment";
 import "./CommentSection.scss";
 
-export default function CommentSection({
-  comments,
-  currentUser,
-  addCommentHandle,
-  isCurrentUser,
-  deleteHandle,
-  addNewReply,
-}) {
+export default function CommentSection({ comments, currentUser }) {
   const [replyCommentID, setReplyCommentID] = useState(0);
 
   const replyComponentID = useId();
@@ -29,18 +22,13 @@ export default function CommentSection({
                 <Comment
                   key={el.id}
                   commentData={el}
-                  isCurrentUser={isCurrentUser}
-                  deleteHandle={deleteHandle}
                   handleReply={handleReplyClick}
                   replyCommentID={replyCommentID}
-                  addCommentHandle={addCommentHandle}
-                  addNewReply={addNewReply}
                   currentUser={currentUser}
                 />
                 <AddComment
                   currentUser={currentUser}
                   isReplying={true}
-                  addNewReply={addNewReply}
                   key={replyComponentID}
                   parentCommentID={el.id}
                 />
@@ -51,21 +39,13 @@ export default function CommentSection({
             <Comment
               key={el.id}
               commentData={el}
-              isCurrentUser={isCurrentUser}
-              deleteHandle={deleteHandle}
               currentUser={currentUser}
-              addCommentHandle={addCommentHandle}
-              addNewReply={addNewReply}
               handleReply={handleReplyClick}
               replyCommentID={replyCommentID}
             />
           );
         })}
-      <AddComment
-        currentUser={currentUser}
-        isReplying={false}
-        addCommentHandle={addCommentHandle}
-      />
+      <AddComment currentUser={currentUser} isReplying={false} />
     </div>
   );
 }

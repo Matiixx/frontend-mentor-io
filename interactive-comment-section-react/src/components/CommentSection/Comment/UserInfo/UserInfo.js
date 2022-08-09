@@ -1,14 +1,15 @@
 import React from "react";
+import useStore from "../../../../store/useStore";
 import "./UserInfo.scss";
 
 export default function UserInfo({
   user,
   createdAt,
-  isCurrentUser,
-  deleteHandle,
   commentID,
   handleReplyClick,
 }) {
+  const deleteHandle = useStore((state) => state.deleteComment);
+  const isCurrentUser = useStore((state) => state.isCurrentUser);
   return (
     <div className="user-info-container">
       <div className="user-info">
